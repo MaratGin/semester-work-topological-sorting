@@ -1,27 +1,33 @@
 #pragma once
-
+#include <list>
+using namespace std;
+#include <vector>
+#include <stack>
 // Заголовочный файл с объявлением структуры данных
 
 namespace itis {
 
   // Tip 1: объявите здесь необходимые структуры, функции, константы и прочее
 
-  // Пример: объявление константы времени компиляции в заголовочном файле
-  inline constexpr auto kStringConstant = "Hello, stranger!";
-
   // Пример: объявление структуры с полями и методами
-  struct MyStructure {
+  struct Graph {
    public:
-    int size_{0};
-    int capacity_{0};
-    int* data_{nullptr};
 
-    // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
-    // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
+    int _numberOfVertex;
 
-    int size() const {
-      return size_;
-    }
+    list<int> *adj_m;
+
+    void depthFirstSearch(int v,bool visited[], stack<int> &Stack);
+
+    explicit Graph(int numberOfVertex);
+
+    void addEdge(int v,int w);
+
+    void topologicalSort();
+
+    ~Graph();
+
+
   };
 
 }  // namespace itis
