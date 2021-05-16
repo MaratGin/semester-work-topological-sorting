@@ -21,7 +21,7 @@ namespace itis {
 
     explicit Graph(int numberOfVertex);
 
-    void addEdge(int v,int w);
+    void addEdge(int v,int  w );
 
     void topologicalSort();
 

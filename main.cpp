@@ -33,7 +33,7 @@
     //
     //
     //
-    string path = "C:\\Repos\\semester-work-topological-sortingg\\dataset\\dataset_example.csv";
+    string path = "C:\\Repos\\semester-work-topological-sortingg\\dataset\\01.csv";
     //
     ////ИЗМЕНИТЬ ПУТЬ К НАБОРАМ ДАННЫХ
     //
@@ -62,12 +62,44 @@ cout<<intValues.size()<<endl;
 
 
 
+
+      auto *graph= new itis::Graph(40);
+
+//      graph->addEdge(0,0);
+//
+//      graph->addEdge(1,4);
+
+
+
+      int matrix [graph->_numberOfVertex];
+      int k=0;
+
+      for (int j = 0; j <graph->_numberOfVertex ; ++j) {
+
+        for (int i = 0; i < graph->_numberOfVertex; ++i) {
+          matrix[i] = intValues[k];
+          k++;
+        }
+
+
+
+        for (int i = 0; i <40 ; ++i) {
+                graph->addEdge(j,matrix[i]);
+        }
+
+
+      }
+
+
+
+
+
       /// НАЧАЛО ЗАМЕРА ВРЕМЕНИ
       const auto time_point_before = std::chrono::steady_clock::now();
 
-
-
-
+      cout<<"I am here"<<endl;
+      graph->topologicalSort();
+      cout<<"I am here"<<endl;
       const auto time_point_after = std::chrono::steady_clock::now();
       ////КОНЕЦ ЗАМЕРА ВРЕМЕНИ
 

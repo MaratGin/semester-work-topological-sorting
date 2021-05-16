@@ -25,18 +25,23 @@ namespace itis {
 
    // vector<int>answer;
     stack<int> Stack;
-
+cout<<"AA1"<< endl;
     bool *visited = new bool [_numberOfVertex];
 
     for( int i = 0; i < _numberOfVertex; i++){
       visited[i] = false;
     }
-
+    cout<<"AA2"<< endl;
     for (int i = 0; i < _numberOfVertex; i++){
-      if (!visited[i])
+
+      if (!visited[i]) {
+
         depthFirstSearch(i, visited, Stack);
+
+      }
     }
-    cout<<Stack.empty()<<endl;
+
+
     while (!Stack.empty()){
 
       cout << Stack.top() << " "<< endl;
@@ -45,10 +50,12 @@ namespace itis {
 
   }
   void Graph::depthFirstSearch(int v, bool *visited, stack<int> &Stack) {
-    for (_List_iterator<int> i =adj_m->begin() ; i !=adj_m->end(); ++i) {
+
+    for (_List_iterator<int>  i =adj_m->begin() ; i !=adj_m->end(); ++i) {
       if (!visited[*i]){
         depthFirstSearch(*i,visited,Stack);
       }
+
     }
 
     Stack.push(v);
