@@ -57,19 +57,8 @@
 
         intValues = split(line, ',');
       }
-cout<<intValues.size()<<endl;
-
-
-
-
 
       auto *graph= new itis::Graph(40);
-
-//      graph->addEdge(0,0);
-//
-//      graph->addEdge(1,4);
-
-
 
       int matrix [graph->_numberOfVertex];
       int k=0;
@@ -82,16 +71,15 @@ cout<<intValues.size()<<endl;
         }
 
 
+        for (int i = 0; i<graph->_numberOfVertex ; ++i) {
+          if (matrix[i]==1){
+            graph->addEdge(j,i);
+          }
 
-        for (int i = 0; i <40 ; ++i) {
-                graph->addEdge(j,matrix[i]);
+
         }
 
-
       }
-
-
-
 
 
       /// НАЧАЛО ЗАМЕРА ВРЕМЕНИ
@@ -116,50 +104,4 @@ cout<<intValues.size()<<endl;
 
     fin.close();
     return 0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  cout<<"Ss"<< endl;
-//
-//  auto *graph= new itis::Graph(6);
-//
-//  cout<<"Ss"<< endl;
-//
-//  graph->addEdge(5,2);
-//
-//  cout<<"Ss"<< endl;
-//
-//  graph->addEdge(5,0);
-//  cout<<"Ss"<< endl;
-//  graph->addEdge(4,0);
-//  cout<<"Ss"<< endl;
-//  graph->addEdge(4,1);
-//  cout<<"Ss"<< endl;
-//  graph->addEdge(3,1);
-//  cout<<"Ss"<< endl;
-//  graph->addEdge(2,3);
-//  cout<<"Ss"<< endl;
-//
-//
-//  graph->topologicalSort();
-
-
-}
-
-
+    }

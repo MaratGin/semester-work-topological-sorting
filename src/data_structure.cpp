@@ -23,44 +23,44 @@ namespace itis {
 
   void Graph::topologicalSort() {
 
-   // vector<int>answer;
+    // vector<int>answer;
     stack<int> Stack;
-cout<<"AA1"<< endl;
+
     bool *visited = new bool [_numberOfVertex];
 
     for( int i = 0; i < _numberOfVertex; i++){
       visited[i] = false;
     }
-    cout<<"AA2"<< endl;
+
     for (int i = 0; i < _numberOfVertex; i++){
-
-      if (!visited[i]) {
-
+      if (!visited[i])
         depthFirstSearch(i, visited, Stack);
-
-      }
     }
-
 
     while (!Stack.empty()){
 
       cout << Stack.top() << " "<< endl;
-     Stack.pop();
+      Stack.pop();
     }
 
   }
   void Graph::depthFirstSearch(int v, bool *visited, stack<int> &Stack) {
 
-    for (_List_iterator<int>  i =adj_m->begin() ; i !=adj_m->end(); ++i) {
-      if (!visited[*i]){
-        depthFirstSearch(*i,visited,Stack);
-      }
+    visited[v] = true;
 
-    }
+    list<int>::iterator i;
+    for (i = adj_m[v].begin(); i != adj_m[v].end(); ++i)
+      if (!visited[*i])
+        depthFirstSearch(*i, visited, Stack);
+//    for (_List_iterator<int> i =adj_m->begin() ; i !=adj_m->end(); ++i) {
+//      if (!visited[*i]){
+//        depthFirstSearch(*i,visited,Stack);
+//      }
+    //}
 
     Stack.push(v);
-    cout<<Stack.size()<<endl;
+
   }
 
 
-}  // namespace itis
+}
