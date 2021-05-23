@@ -1,5 +1,5 @@
 # Topological Sorting
-[![CMake](https://github.com/Algorithms-and-Data-Structures-2021/semester-work-template/actions/workflows/cmake.yml/badge.svg)](https://github.com/Algorithms-and-Data-Structures-2021/semester-work-template/actions/workflows/cmake.yml)
+[![CMake](https://github.com/Algorithms-and-Data-Structures-2021/semester-work-topological-sorting/actions/workflows/cmake.yml/badge.svg)](https://github.com/Algorithms-and-Data-Structures-2021/semester-work-topological-sorting/actions/workflows/cmake.yml)
 
 **_Измените status badge сверху для отображения статуса сборки вашего проекта._**
 
