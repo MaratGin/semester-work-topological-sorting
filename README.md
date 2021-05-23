@@ -8,6 +8,8 @@
 `Actions > CMake > ... > Create status badge`
 
 [Наша папка на гугл диске](https://drive.google.com/drive/folders/1sHAlPq_tZUuv0cQ1u_QsZKdvk7i4IR5r)
+
+
 _Краткое описание семестрового проекта. Следует отразить информацию по следующим пунктам:_
 
 - _Какой алгоритм сортировки реализуется?_
